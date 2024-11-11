@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phishing Detection</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="icon128.png" alt="Logo" class="logo" />
+    </div>
+
+    <!-- Title -->
+    <h1>Phishing Detection</h1>
+
+    <!-- Authentication Forms -->
+    <div id="auth-container">
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Login')">Login</button>
+        <button class="tablinks" onclick="openTab(event, 'SignUp')">Sign Up</button>
+      </div>
+
+      <div id="Login" class="tabcontent" style="display: block;">
+        <form id="login-form">
+          <div class="input-group">
+            <input type="email" id="login-email" required />
+            <label for="login-email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="login-password" required />
+            <label for="login-password">Password</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+
+      <div id="Sign Up" class="tabcontent">
+        <form id="signup-form">
+          <div class="input-group">
+            <input type="email" id="signup-email" required />
+            <label for="signup-email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signup-password" required />
+            <label for="signup-password">Password</label>
+          </div>
+          <button type="submit" class="btn btn-secondary">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+      <!-- Progress Bar -->
+      <div id="progress-container" style="display: none;">
+        <label for="progress-bar">Percent of Scam:</label>
+        <div id="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="progress-text">0%</div>
+      </div>
+
+      <button id="scanEmails" class="btn btn-primary">Scan Emails</button>
+      <button id="visitWebsite" class="btn btn-secondary">Visit Our Website</button>
+      <button id="logout" class="btn btn-secondary">Log Out</button>
+      <div id="output">
+        <p>No scans yet. Results will be displayed here.</p>
+      </div>
+
+      <div class="settings">
+        <h2>Settings</h2>
+        <div class="settings-item">
+          <label for="enableNotifications">Enable Notifications</label>
+          <label class="switch">
+            <input type="checkbox" id="enableNotifications" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="settings-item">
+          <label for="autoScan">Auto Scan on Load</label>
+          <label class="switch">
+            <input type="checkbox" id="autoScan" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="settings-item">
+          <label for="darkMode">Enable Dark Mode</label>
+          <label class="switch">
+            <input type="checkbox" id="darkMode" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2024 Phinding nemo. All rights reserved.
+    <br />
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
