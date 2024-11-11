@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 # Scam-Email-Detection-NewHacks-2024
 
+To view the complete repository history, visit https://github.com/NPinzin/Phishing-Nemo-NewHacks-2024.git 
+
 ## Recurrent Neural Network
 After implementing previous models to lackluster results and heavy overfitting, a Recurrent Neural Network was chosen, following several guides in order to change the goal of the project, and detect spam emails. This was done through embedding of individual characters, and a Gated Recurrent Unit, as well as through small improvements such as the BucketIterator, and an improved Adam optimizer and Binary Cross Entropy with Logits loss function. An average test accuracy of 91% was observed after only 5 epochs.
 
